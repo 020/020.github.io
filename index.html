@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Making WA government data more easily discoverable, accessible and consumable. Stimulating innovative solutions by making data, tools and resources available to conduct research, build apps, design data visualisations and more." />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://catalogue.data.wa.gov.au/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -28,7 +29,7 @@
                     <form class="top_search_input" name="top_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
                         <div class="input-group mb-3">
                             <input id="top_search" name="q" type="search" class="form-control" aria-label="searchbox">
-                            <select id="search_type" name="search_type" onChange="searchType()">
+                            <select id="search_type" name="search_type" onChange="searchType()" aria-label="search dropdown">
                                 <option value="" selected="selected">Data</option>
                                 <option value="">Organisations</option>
                                 <option value="">Groups</option>
