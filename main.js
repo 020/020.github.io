@@ -2,6 +2,23 @@ $(document).ready(function() {
     $('.header').height($(window).height());
 })
 
+$(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 50) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-to-top').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+});
+
 var default_defn = {
     icon: "fa-book"
 }
@@ -363,7 +380,7 @@ function searchType() {
                             for (i = 0; i < choices.length; i++)
                                 if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
                             suggest(suggestions);
-                            console.log(choices)
+                            //console.log(choices)
                         })
                         .catch(console.error);
                 }

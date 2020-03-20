@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Data WA</title>
+    <title>Progress - Data WA</title>
     <meta charset="utf-8">
     <meta name="description" content="Making WA government data more easily discoverable, accessible and consumable. Stimulating innovative solutions by making data, tools and resources available to conduct research, build apps, design data visualisations and more." />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="auto-complete.css">
 </head>
 
-<body>
+<body>   
     <div class="container">
+        <!--Data WA Header-->
         <div class="row align-items-end">
             <div class="col mb-3 mt-3">
                 <a href="https://www.data.wa.gov.au">
@@ -53,7 +54,7 @@
             <div class="container">
                 <ul class="navbar-nav w-100 nav-fill">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://catalogue.data.wa.gov.au/dataset">Data</a>
@@ -82,49 +83,24 @@
                                 <a class="dropdown-item" href="#">Capture WA</a>
                             </div>
                         </li>
-                        <!--</li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Help</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li> -->
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container">
-        <form class="main_search_input" name="main_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
-            <div class="input-group input-group-lg mb-5 mt-5">
-                <input id="main_search" name="q" type="search" class="form-control" aria-label="searchbox"  placeholder="Search for Western Australian Government data">
-                <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
-                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
-                </button>
-        </form>
-
-        </div>
+    <!--Data WA Header End-->
+    <div class="container mt-3">
+        <h1><strong>Progress</strong></h1>
+        <hr>
+        <h4>This dashboard tracks our progress towards the goals of the policy (more data released by more public sector organisations) and measures how well we’re doing (open licensing, metadata completeness, and use of machine-readable formats).</h4>
+        <hr>
+        <p>Practical limitations mean we can only track and report on data that is discoverable through data.wa.gov.au. So, while an agency may already have published information through their own website, if it hasn’t been published with the appropriate metadata on data.wa.gov.au we aren’t able to include it in this dashboard.</p>
+        <p>In designing these measures, we have tried to retain a balance between measures that are simple and easy to understand and the nuances inherent in publishing government information. We hope we have struck the right balance but do acknowledge there are some shortcomings – for example, most library collections and archival materials are never going to be machine-readable.</p>
+        <p>This dashboard remains a work in progress and will continue to be improved and refined over time. We’d love to hear any feedback you have about what the dashboard is telling you (or what it isn’t) and on the quality of the measures we’re using.</p>
     </div>
 
-    <!-- START NEW CODE -->
-
-    <div class="container categories_actual">
-        <div class="row">
-
-        </div>
-    </div>
-    <!-- END NEW CODE -->
-
-    <br>
-
-    <div class="jumbotron jumbotron-fluid ">
-        <div class="container text-center">
-            <h1>Join the community that is committed to providing West Australian government data</h1>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Join the Data WA community</a>
-            </p>
-        </div>
-    </div>
-    <!-- Footer -->
+        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYmJlOTM0NjAtN2ZkNi00NzgwLWJkNmUtMGEyMGFhZWM0MDljIiwidCI6IjkwOTFiODQwLTNkMzUtNDVlMy1hNGVjLTljODk3YWY4MDIxMSIsImMiOjEwfQ%3D%3D" frameborder="0" scrolling="no" allowfullscreen="true" class="center" style="width: 100%; height: 4100px; overflow: hidden;"></iframe>
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+    
     <footer class="page-footer font-small mdb-color pt-4">
         <!-- Footer Links -->
         <div class="container text-center text-md-left">

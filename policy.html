@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Policy - Data WA</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Making WA government data more easily discoverable, accessible and consumable. Stimulating innovative solutions by making data, tools and resources available to conduct research, build apps, design data visualisations and more." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://catalogue.data.wa.gov.au/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="auto-complete.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Data WA Header-->
+        <div class="row align-items-end">
+            <div class="col mb-3 mt-3">
+                <a href="https://www.data.wa.gov.au">
+                    <img src="images/logo5.svg" alt="Data WA Logo">
+                </a>
+            </div>
+            <div class="col">
+                <a class="btn btn-primary float-right mb-3 mr-3 btn-sm" href="#">Contact Us</a>
+                <a class="btn btn-primary float-right mb-3 mr-1 btn-sm" href="https://toolkit.data.wa.gov.au/hc/en-gb">Help Centre</a>
+
+                <div class="container">
+                    <form class="top_search_input" name="top_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
+                        <div class="input-group mb-3">
+                            <input id="top_search" name="q" type="search" class="form-control" aria-label="searchbox">
+                            <select id="search_type" name="search_type" onChange="searchType()" aria-label="search dropdown">
+                                <option value="" selected="selected">Data</option>
+                                <option value="">Organisations</option>
+                                <option value="">Groups</option>
+                                <option value="">Applications</option>
+                                <option value="">Help Centre</option>
+                            </select>
+                            <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars fa-lg"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <div class="container">
+                <ul class="navbar-nav w-100 nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/dataset">Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/organization">Organisations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/showcase">Applications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/group">Groups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/showcase">SLIP</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Public Sector</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">wa.gov.au</a>
+                                <a class="dropdown-item" href="#">WALIS</a>
+                                <a class="dropdown-item" href="#">iThink</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Capture WA</a>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Data WA Header End-->
+    <div class="container mb-3 mt-3">   
+        <h1><strong>Open Data Policy</strong></h1>
+        <hr>
+        <h4>The purpose of the Western Australian Whole of Government Open Data Policy is to improve management and use of the public sector’s data assets in order to deliver value and benefits for all Western Australians.</h4>
+        <hr>
+        <h5><strong>Introduction</strong></h5>
+        <p>Western Australia has a proud history of being internationally competitive by leveraging its resources to achieve a strong economy. In order for the state to maintain its competitive advantage, a greater shift towards innovation and technology is required. Critical components to this are our data and information resources which are set to grow exponentially. Sharing this resource widely across government and the community unlocks opportunities for our enterprising citizens and organisations. This has the potential to drive better government, innovation, and new business and employment opportunities, to secure the state's prosperity and growth into the future.</p>
+        <p>The Western Australian Government collects and uses a vast array of data in the course of its everyday operations. This data is an important strategic asset and when managed well is a source of significant value to the state.</p>
+        <p>Many agencies already make their data available to the public, including on their websites or in reports and publications. Taking steps to make this data easier to find and use and opening access to other datasets will unlock opportunities for government, businesses and communities to utilise data in more and diverse ways. This gives rise to the development of new insights, ideas and services that have the potential to improve the way we work and live.</p>
+        <p>Given the increasing demand for flexible and high-quality online and mobile services, better management and new uses of existing government services and assets such as data is now more important than ever.</p>
+        <h5><strong>Purpose</strong></h5>
+        <p>The purpose of the Western Australian Whole of Government Open Data Policy (the Policy) is to improve management and use of the public sector’s data assets in order to deliver value and benefits for all Western Australians. This includes greater release of appropriate and high-value data to the public in ways that are easily discoverable and usable.</p>
+        <p>It is intended that opening access to public sector data will increase productivity and improve service delivery by supporting innovation, research and education, and by facilitating collaboration and evidence-based decision making.</p>
+        <p>
+            The Policy and its implementation guidance and tools:
+            <ul>
+                <li>clearly outlines the Western Australian Government’s position on open data;</li>
+                <li>encourages a well-considered and consistent approach across the public sector to opening access to data (which also ensures the privacy of individuals is adequately protected);</li>
+                <li>demonstrates the value of data and the potential benefits of opening access to data; and</li>
+                <li>helps agencies implement best practice information management principles to achieve open data objectives.</li>
+            </ul>
+        </p>
+        <h5><strong>Background</strong></h5>
+        <p>In practice across Australia and the world, the approach to open data varies to some extent. For the purpose of this Policy, data is considered ‘open’ when it is:
+            <ul>
+                <li>released and available for the general public (not for exclusive use);</li>
+                <li>easily discoverable;</li>
+                <li>in formats that are modifiable, non-proprietary and machine-readable;</li>
+                <li>licensed to enable reuse and redistribution; and</li>
+                <li>available at no cost to users.</li>
+            </ul>
+        </p>
+        <p>The Policy recognises the above situation for ‘open’ data is not always possible or appropriate. For example, there may be instances where more restrictive licences are used and/or a charge is applied.</p>
+        <p>Opening access to public sector data, together with approaches to removing restrictions surrounding its use, is a growing trend nationally and internationally. Better management and use of data within government, and enabling broader access and use (e.g. by non-government organisations, businesses and industry, academia and members of the public) has a range of potential benefits for both the public sector and the community.</p>
+        <p>This includes a more efficient and effective public sector through improvements in the use and application of data for financial and evidence-based policy decisions; strategic and targeted cross-agency collaboration; and the development of innovative solutions, services and tools where there is an identified policy or community need. Opening access to data also supports public sector efficiencies and savings through reduced duplication, streamlined processes, and the development and delivery of tools/services more quickly and at lower costs.</p>
+        <p>For the broader community, potential social and economic benefits include opportunities to develop new businesses and industries (including the not-for-profit sector); improved research outcomes; and better business and community decision making.</p>
+        <p>Opening access to public sector data also promotes a more transparent and accountable government by providing greater visibility around government activity and expenditure.</p>
+        <h5><strong>Scope</strong></h5>
+        <p>The target beneficiaries of this Policy are the people of Western Australia.</p>
+        <p>The Policy applies to all agencies and organisations (agencies) covered by the Public Sector Management Act 1994 (the Act). The Policy also applies to agencies listed in Schedules 1 and 2 to the Act (e.g. government enterprises, universities, local government, courts and tribunals), consultants and contractors to government, and recipients of government grants.</p>
+        <p>The focus of the Policy is raw data (data not yet subjected to analysis or interpretation). However, the Policy can also apply to other types of information such as data that has been processed to provide greater value1.</p>
+        <p>Achieving a comprehensive approach to open data is a progressive and evolving process. In the first instance, agencies should improve the discoverability and usability of existing datasets by making them open, prioritising those datasets that are already publicly available, in demand by the public, and/or considered high-value.</p>
+        <p>The Policy also applies to all new data collection and creation, development of systems that collect or create data, and any modernisation projects that update existing data systems.</p>
+        <p>Before publishing data, agencies should consider their own legislative requirements, and the value and intended outcome of openness against the cost and potential implications of making that data open. This will assist with decisions surrounding how best to manage the data, including whether to release the data and under what conditions, and the priorities for release.</p>
+        <p>It is expected that agencies will implement the Policy using existing budgets and resources.</p>
+        <h5><strong>Data Quality</strong></h5>
+        <p>It is important users have confidence in the data they are accessing and using, and are made aware of any caveats relating to it. To enable users to determine whether a dataset is suitable for their purposes, data should be made available with a statement, or metadata, regarding its purpose and quality.</p>
+        <p>Even where there are limitations with regard to a dataset, such as an incomplete dataset, releasing the data is encouraged, provided sufficient information is included to notify users of any limitations or gaps.</p>
+        <h5><strong>Principals</strong></h5>
+        <p>The following principles describe best-practice information management standards for open data across the Western Australian public sector.</p>
+        <p><strong>Open by default</strong>
+            <br> Agencies are encouraged to adopt a position of data openness, with the prerogative in favour of data release, unless there is a clear need to restrict or preclude access for reasons of privacy, confidentiality, security or other relevant considerations.
+        </p>
+        <p>Wherever possible, data should be made available at no or minimal cost to users in order to maximise the potential for use. The Policy recognises that there may be legitimate instances where agencies consider applying a reasonable charge for the data, such as where there are significant costs in making the data available. Agencies are encouraged to discuss these considerations with the lead agency for implementation (Landgate).</p>
+        <p><strong>Easily discoverable and subject to public input</strong>
+            <br> Data will be easily discoverable by being accessible through the Government of Western Australia’s online data portal (data.wa.gov.au). The portal will provide a single and convenient point of access to open data in Western Australia. Publishing data with metadata will better enable users to search for and understand how best to use the data.</p>
+        <p>Opening access to data facilitates two-way engagement and collaboration between government and the public, industry and other groups. To support this, there will be mechanisms to enable public input and engagement surrounding the data and how it is used.</p>
+        <p><strong>Usable</strong>
+            <br> Data should be published in internationally recognised, open standard formats that make it easy to use and transform – that is, formats that are non-proprietary and machine-readable. Publishing raw data as collected at the source, with a high level of granularity, is preferred where appropriate; however some data may be best published in aggregate or modified forms.</p>
+        <p>Data should be licensed appropriately by agencies with clear terms surrounding copyright and use. Where possible and appropriate, a non-restrictive licence should be used to promote maximum dissemination and reuse of the data.</p>
+        <p>Agencies are encouraged to use existing licensing arrangements applied to their data where this makes the data available according to the principles of the Policy. Where these are not suitable, or there is no existing licence in place, standardised licensing frameworks, such as Creative Commons, may be useful. The Creative Commons Attribution (CC BY) licence, for example, is consistent with the principles of the Policy. However, it should be noted that once a Creative Commons licence has been implemented, it cannot be revoked.</p>
+        <p>There may be instances where agencies are required to set out special copyright arrangements; legislation stipulates a particular copyright position; or a more restrictive licence to those provided under Creative Commons is required. Agencies should check and consider their own requirements prior to publishing data.</p>
+        <p>Data may have inherent intellectual property and deliver more value and better outcomes for the State when access to the data is managed appropriately. Agencies should consider the Western Australian Government Intellectual Property Policy 2015, which provides guidance on the development, management and use of intellectual property assets, including data.</p>
+        <p><strong>Protected where required</strong>
+            <br> A large amount of data collected by the public sector will be suitable for public release. However, there are instances where the data should be protected and thus, access restricted or precluded, including:
+            <ul>
+                <li>privacy – where personal or sensitive information is involved that can be identified for an individual, or may be involved as an unintended result of data linking or combination (see below for more information);</li>
+                <li>security – because of the nature of the data or information;</li>
+                <li>confidentiality – arising because of the nature of the data or information itself or because a contractual arrangement has been made in relation to the data or information;
+                </li>
+                <li>legal privilege – attached to certain legal advice;</li>
+                <li>commercial – such as commercial-in-confidence, patent pending or intellectual property considerations; and</li>
+                <li>public interest – if there are public interest considerations against release and, on balance, those considerations outweigh the public interest considerations in favour of release.
+                </li>
+            </ul>
+        </p>
+        <p>Before releasing data, agencies should carefully consider and address any privacy concerns. That is, data that is released must not be, or able to be, associated with any individual. Agencies may need to de-identify data, which means removing anything that can identify a person. Caution needs to be exercised where disparate datasets, individually de-identified, could potentially be linked or combined to re-identify individuals.</p>
+        <p>Agencies should also consider their own specific legislative provisions relating to the release of data and information.</p>
+        <p><strong>Timely</strong>
+            <br> Data should be as up-to-date as possible and made available to users in a timely manner. Agencies should clearly state the date(s) of data collection and publishing so as to permit users to make a judgement on the currency of the dataset. As data is updated, agencies should aim to make it available as soon as possible, or on a consistent periodic basis.</p>
+        <h5><strong>Implementation</strong></h5>
+        <p>Implementation and maintenance of the Policy will be led by Landgate.</p>
+        <p>This Policy will build on the Western Australian Government’s success in opening access to location-based data through the Location Information Strategy for Western Australia, endorsed by the State Government in 2012, and the Shared Location Information Platform (SLIP), established by Landgate.</p>
+        <p>Implementation of this Policy will be a progressive and evolving process. It is not expected that agencies will immediately assume a level of open data maturity. Rather, agencies are encouraged to consider their current level and move progressively towards a position of data openness as outlined in this Policy.</p>
+        <p>Agencies should give consideration to how they can collect and manage their data in a way that supports both downstream data processing and the release of data to the public in manners consistent with the Policy (and without the need for costly retrofitting). Agencies should also consider how they will effectively manage their data as an asset, such as by keeping a data inventory or asset register. To support this, agencies are encouraged to develop their own agency-level open data policy, or incorporate open data into an existing data or information management policy.
+        </p>
+        <p>Additional information and guidance has been developed to support agencies in implementing the Policy. Landgate as the lead agency for implementation will provide further support as the Policy is rolled-out, capturing lessons from the experience of open data in Western Australia, other Australian jurisdictions and overseas.</p>
+        <h5><strong>Review</strong></h5>
+        <p>This Policy is subject to review at the end of the first year and at least every two years, or as deemed appropriate, thereafter.</p>
+    </div>
+    
+    <footer class="page-footer font-small mdb-color pt-4">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+            <!-- Footer links -->
+            <div class="row text-center text-md-left mt-3 pb-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Acknowledgement</h6>
+                    <p>The Government of Western Australia respectfully acknowledges the traditional owners of country throughout Western Australia and pays its respects to Elders past, present and emerging. </p>
+                </div>
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+                    <p>
+                        <a href="https://catalogue.data.wa.gov.au/user/login">Publisher Login</a>
+                    </p>
+                    <p>
+                        <a href="#!">About</a>
+                    </p>
+                    <p>
+                        <a href="policy.html">Policy</a>
+                    </p>
+                    <p>
+                        <a href="progress.html">Progress</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Legal</h6>
+                    <p>
+                        <a href="accessibility.html">Accessibility</a>
+                    </p>
+                    <p>
+                        <a href="copyright.html">Copyright</a>
+                    </p>
+                    <p>
+                        <a href="disclaimer.html">Disclaimer</a>
+                    </p>
+                    <p>
+                        <a href="privacy.html">Privacy</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p>
+                        <i class="fa fa-home mr-3" aria-hidden="true"></i> <a href="https://www.google.com/maps/place/1+Midland+Square,+Midland+WA+6056/@-31.8868518,116.0025325,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32b82f4b7c575f:0xe34af37479937303!8m2!3d-31.8868518!4d116.0047212">1 Midland Sq, Midland 6056</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope mr-3" aria-hidden="true"></i> <a href="mailto:info@data.wa.gov.au">info@data.wa.gov.au</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone mr-3" aria-hidden="true"></i> +61 (0)8 9273 7373
+                    </p>
+                    <p>
+                        <i class="fa fa-print mr-3" aria-hidden="true"></i> +61 (0)8 9250 3187
+                    </p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Footer links -->
+            <!-- Grid row -->
+            <div class="row d-flex align-items-center">
+                <!-- Grid column -->
+                <div class="col-md-5 col-lg-4 ml-lg-0">
+                    <!-- Social buttons -->
+                    <div class="text-center text-md-left">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg rgba-white-slight mx-1" href="https://www.youtube.com/channel/UCRp1kcYNF-IWvv4rIv42Plg/videos" aria-label="youtube">
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg rgba-white-slight mx-1">
+                                    <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg rgba-white-slight mx-1" href="https://twitter.com/datagovwa?lang=en" aria-label="twitter">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg rgba-white-slight mx-1">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <div class="col-md-7 col-lg-8">
+                    <!--Copyright-->
+                    <p class="text-center text-md-right">&copy; Government of Western Australia
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        <a href="#">
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>    
+    </footer>
+    <!-- Footer -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script async src="main.js"></script>
+    <script src="auto-complete.js"></script>
+
+</body>
+
+</html>
