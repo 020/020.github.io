@@ -13,36 +13,32 @@
     <link rel="stylesheet" href="auto-complete.css">
 </head>
 
-<body>
+body>
     <div class="container">
-        <!--Data WA Header-->
         <div class="row align-items-end">
-            <div class="col mb-3 mt-3">
+            <div class="col- mb-3 mt-3">
                 <a href="https://www.data.wa.gov.au">
                     <img src="images/logo5.svg" alt="Data WA Logo">
                 </a>
             </div>
             <div class="col">
-                <a class="btn btn-primary float-right mb-3 mr-3 btn-sm" href="#">Contact Us</a>
+                <a class="btn btn-primary float-right mb-3 btn-sm" href="#">Contact Us</a>
                 <a class="btn btn-primary float-right mb-3 mr-1 btn-sm" href="https://toolkit.data.wa.gov.au/hc/en-gb">Help Centre</a>
-
-                <div class="container">
-                    <form class="top_search_input" name="top_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
-                        <div class="input-group mb-3">
-                            <input id="top_search" name="q" type="search" class="form-control" aria-label="searchbox">
-                            <select id="search_type" name="search_type" onChange="searchType()" aria-label="search dropdown">
-                                <option value="" selected="selected">Data</option>
-                                <option value="">Organisations</option>
-                                <option value="">Groups</option>
-                                <option value="">Applications</option>
-                                <option value="">Help Centre</option>
-                            </select>
-                            <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                <form class="top_search_input" name="top_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
+                    <div class="input-group mb-3">
+                        <input id="top_search" name="q" type="search" class="form-control" aria-label="searchbox">
+                        <select id="search_type" name="search_type" onChange="searchType()" aria-label="search dropdown">
+                            <option value="" selected="selected">Data</option>
+                            <option value="">Organisations</option>
+                            <option value="">Groups</option>
+                            <option value="">Applications</option>
+                            <option value="">Help Centre</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

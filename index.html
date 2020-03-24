@@ -16,32 +16,29 @@
 <body>
     <div class="container">
         <div class="row align-items-end">
-            <div class="col mb-3 mt-3">
+            <div class="col- mb-3 mt-3">
                 <a href="https://www.data.wa.gov.au">
                     <img src="images/logo5.svg" alt="Data WA Logo">
                 </a>
             </div>
             <div class="col">
-                <a class="btn btn-primary float-right mb-3 mr-3 btn-sm" href="#">Contact Us</a>
+                <a class="btn btn-primary float-right mb-3 btn-sm" href="#">Contact Us</a>
                 <a class="btn btn-primary float-right mb-3 mr-1 btn-sm" href="https://toolkit.data.wa.gov.au/hc/en-gb">Help Centre</a>
-
-                <div class="container">
-                    <form class="top_search_input" name="top_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
-                        <div class="input-group mb-3">
-                            <input id="top_search" name="q" type="search" class="form-control" aria-label="searchbox">
-                            <select id="search_type" name="search_type" onChange="searchType()" aria-label="search dropdown">
-                                <option value="" selected="selected">Data</option>
-                                <option value="">Organisations</option>
-                                <option value="">Groups</option>
-                                <option value="">Applications</option>
-                                <option value="">Help Centre</option>
-                            </select>
-                            <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                <form class="top_search_input" name="top_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
+                    <div class="input-group mb-3">
+                        <input id="top_search" name="q" type="search" class="form-control" aria-label="searchbox">
+                        <select id="search_type" name="search_type" onChange="searchType()" aria-label="search dropdown">
+                            <option value="" selected="selected">Data</option>
+                            <option value="">Organisations</option>
+                            <option value="">Groups</option>
+                            <option value="">Applications</option>
+                            <option value="">Help Centre</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -82,13 +79,6 @@
                                 <a class="dropdown-item" href="#">Capture WA</a>
                             </div>
                         </li>
-                        <!--</li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Help</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li> -->
                 </ul>
             </div>
         </div>
@@ -96,7 +86,7 @@
     <div class="container">
         <form class="main_search_input" name="main_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
             <div class="input-group input-group-lg mb-5 mt-5">
-                <input id="main_search" name="q" type="search" class="form-control" aria-label="searchbox"  placeholder="Search for Western Australian Government data">
+                <input id="main_search" name="q" type="search" class="form-control" aria-label="searchbox" placeholder="Search for Western Australian Government data">
                 <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
                     <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                 </button>
@@ -105,14 +95,13 @@
         </div>
     </div>
 
-    <!-- START NEW CODE -->
+    <div class="col-sm">
+        <div class="container categories_actual">
+            <div class="row">
 
-    <div class="container categories_actual">
-        <div class="row">
-
+            </div>
         </div>
     </div>
-    <!-- END NEW CODE -->
 
     <br>
 
@@ -225,7 +214,7 @@
                 <!-- Grid column -->
                 <div class="col-md-7 col-lg-8">
                     <!--Copyright-->
-                            <p id="copyright" class="text-center text-md-right">&copy; CurrentCopyrightYear Government of Western Australia</p>                 
+                    <p id="copyright" class="text-center text-md-right">&copy; CurrentCopyrightYear Government of Western Australia</p>
                 </div>
             </div>
             <!-- Grid row -->
@@ -238,7 +227,7 @@
     <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script async src="auto-complete.js"></script>
     <script async src="main.js"></script>
-    
+
 </body>
 
 </html>
