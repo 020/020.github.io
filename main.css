@@ -4,6 +4,7 @@ body {
     background: #fff;
     font-family: Arial, Helvetica, sans-serif;
   }
+
   /*--- navigation bar ---*/
   .navbar {
     background:#084a78;
@@ -182,12 +183,47 @@ body {
     display: none;
 }
 
-/*.loader {
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace.pace-inactive .pace-progress {
+  display: none;
+}
+
+.pace .pace-progress {
   position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url('images/page-loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
-}*/
+  z-index: 2000;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10rem;
+  width: 10rem;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.pace .pace-progress:after {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: attr(data-progress-text);
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 100;
+  font-size: 7rem;
+  line-height: 1;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+}
