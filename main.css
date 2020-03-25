@@ -196,15 +196,14 @@ body {
   display: none;
 }
 
-.pace .pace-progress {
+.pace {
   position: fixed;
   z-index: 2000;
-  position: absolute;
   margin: auto;
-  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  margin-bottom: 10%;
   height: 10rem;
   width: 10rem;
   -webkit-transform: translate3d(0, 0, 0) !important;
@@ -215,7 +214,6 @@ body {
 .pace .pace-progress:after {
   position: fixed;
   display: block;
-  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
