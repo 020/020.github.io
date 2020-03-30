@@ -68,7 +68,7 @@ var theme_defns = {
         icon: "fa-train"
     },
     "Communications": {
-        icon: "fa-phone"
+        icon: "fas fa-phone-alt"
     },
     "Education and Training": {
         icon: "fa-graduation-cap"
@@ -92,7 +92,7 @@ var theme_defns = {
         icon: "fa-users"
     },
     "Health Care": {
-        icon: "fa-syringe"
+        icon: "fas fa-first-aid"
     },
     "Justice Administration": {
         icon: "fa-balance-scale"
