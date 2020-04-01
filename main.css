@@ -137,8 +137,10 @@ body {
     padding-top: 6px;
   }
 
-  .fab:hover {
-    color: #fff;
+/*  .fab:hover {
+    background-color: #003155;
+    border: 1px solid #003155;
+    text-decoration: underline;
 }
 
   /*categories */

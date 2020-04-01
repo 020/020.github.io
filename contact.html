@@ -1,286 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>Contact Us - Data WA</title>
-      <meta charset="utf-8">
-      <meta name="description" content="Making WA government data more easily discoverable, accessible and consumable. Stimulating innovative solutions by making data, tools and resources available to conduct research, build apps, design data visualisations and more." />
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="preconnect" href="https://catalogue.data.wa.gov.au/">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-      <link rel="stylesheet" type="text/css" href="main.css">
-      <link rel="stylesheet" href="auto-complete.css">
-   </head>
-   <body>
-      <div class="container">
-         <div class="row align-items-end">
+
+<head>
+    <title>Contact Us - Data WA</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Making WA government data more easily discoverable, accessible and consumable. Stimulating innovative solutions by making data, tools and resources available to conduct research, build apps, design data visualisations and more." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://catalogue.data.wa.gov.au/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="auto-complete.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row align-items-end">
             <div class="col-md-6 mb-3 mt-3">
-               <a href="https://www.data.wa.gov.au">
-               <img src="images/logo5.svg" alt="Data WA Logo">
-               </a>
+                <a href="https://www.data.wa.gov.au">
+                    <img src="images/logo5.svg" alt="Data WA Logo">
+                </a>
             </div>
             <div class="col-md-6 mt-3 mb-3">
-               <a class="btn btn-primary float-right mb-3 btn-sm" href="contact.html">Contact Us</a>
-               <a class="btn btn-primary float-right mb-3 mr-1 btn-sm" href="https://toolkit.data.wa.gov.au/hc/en-gb">Help Centre</a>
-               <form class="top_search_input" name="top_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
-                  <div class="input-group">
-                     <input id="top_search" name="q" type="search" class="form-control" aria-label="searchbox">
-                     <select id="search_type" name="search_type" onChange="searchType()" aria-label="search dropdown">
-                        <option value="" selected="selected">Data</option>
-                        <option value="">Organisations</option>
-                        <option value="">Groups</option>
-                        <option value="">Applications</option>
-                        <option value="">Help Centre</option>
-                     </select>
-                     <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
-                     <i class="fa fa-search" aria-hidden="true"></i>
-                     </button>
-                  </div>
-               </form>
+                <a class="btn btn-primary float-right mb-3 btn-sm" href="contact.html">Contact Us</a>
+                <a class="btn btn-primary float-right mb-3 mr-1 btn-sm" href="https://toolkit.data.wa.gov.au/hc/en-gb">Help Centre</a>
+                <form class="top_search_input" name="top_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
+                    <div class="input-group">
+                        <input id="top_search" name="q" type="search" class="form-control" aria-label="searchbox">
+                        <select id="search_type" name="search_type" onChange="searchType()" aria-label="search dropdown">
+                            <option value="" selected="selected">Data</option>
+                            <option value="">Organisations</option>
+                            <option value="">Groups</option>
+                            <option value="">Applications</option>
+                            <option value="">Help Centre</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
-         </div>
-      </div>
-      <nav class="navbar navbar-expand-md">
-         <button class="navbar-toggler navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"><i class="fas fa-bars fa-lg"></i></span>
-         </button>
-         <div class="collapse navbar-collapse" id="main-navigation">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars fa-lg"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
             <div class="container">
-               <ul class="navbar-nav w-100 nav-fill">
-                  <li class="nav-item">
-                     <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="https://catalogue.data.wa.gov.au/dataset">Data</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="https://catalogue.data.wa.gov.au/organization">Organisations</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="https://catalogue.data.wa.gov.au/showcase">Applications</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="https://catalogue.data.wa.gov.au/group">Groups</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">Community</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="https://catalogue.data.wa.gov.au/showcase">SLIP</a>
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Public Sector</a>
-                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">wa.gov.au</a>
-                        <a class="dropdown-item" href="#">WALIS</a>
-                        <a class="dropdown-item" href="#">iThink</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Capture WA</a>
-                     </div>
-                  </li>
-               </ul>
+                <ul class="navbar-nav w-100 nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/dataset">Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/organization">Organisations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/showcase">Applications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/group">Groups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://catalogue.data.wa.gov.au/showcase">SLIP</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Public Sector</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">wa.gov.au</a>
+                                <a class="dropdown-item" href="#">WALIS</a>
+                                <a class="dropdown-item" href="#">iThink</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Capture WA</a>
+                            </div>
+                        </li>
+                </ul>
             </div>
-         </div>
-      </nav>
-      <!--Data WA Header End-->
-      <div class="container mb-3 mt-3">
-         <h1><strong>Contact Us</strong></h1>
-         <hr>
-         <h4>We're here to help and answer any question you might have. We look forward to hearing from you.</h4>
-         <hr>
-      </div>
-      <!--Contact Stuff 
-      
+        </div>
+    </nav>
+    <!--Data WA Header End-->
+    <div class="container  mt-3">
+        <h1><strong>Contact Us</strong></h1>
+        <hr>
+        <h4>We're here to help and answer any question you might have. We look forward to hearing from you.</h4>
+        <hr>
+    </div>
+    <!--Contact Stuff 
+
       -->
-      <div class="container features">
-         <form class="text-center" action="#!"> 
-             <div class="row">
-            <div class="col">
-               <p class="h4 mb-4">Get in Touch</p>
-               <!-- Name -->
-               <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
-               <!-- Email -->
-               <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
-               <!-- Subject -->
-               <select class="browser-default custom-select mb-4">
-                  <option value="" disabled>Choose option</option>
-                  <option value="1" selected>Data WA Question</option>
-                  <option value="2">SLIP Question</option>
-                  <option value="3">Request a dataset </option>
-                  <option value="4">Suggestions & Feedback</option>
-                  <option value="5">Other</option>
-               </select>
-               <!-- Message -->
-               <div class="form-group">
-                  <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="4" placeholder="Message"></textarea>
-               </div>
-               <!-- Send button -->
-               <button class="btn btn-info btn-block" type="submit">Submit</button>
-         </form>
-         </div>
-         <div class="col">
-             
-            <p class="h4 mb-4">Contact Details</p>
-            <!--<p>
-               <h5><i class="fas fa-map-marker-alt mr-3" aria-hidden="true"></i>Address: <a href="https://www.google.com/maps/place/1+Midland+Square,+Midland+WA+6056/@-31.8868518,116.0025325,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32b82f4b7c575f:0xe34af37479937303!8m2!3d-31.8868518!4d116.0047212">1 Midland Sq, Midland 6056</a></h5>
-            </p>      
-            <p>
-               <h5><i class="fa fa-envelope mr-3" aria-hidden="true"></i>Email: <a href="mailto:info@data.wa.gov.au">info@data.wa.gov.au</a></h5>
-            </p>
-            <p>
-               <h5><i class="fas fa-phone-alt mr-3" aria-hidden="true"></i>Phone: +61 (0)8 9273 7373</h5>
-            </p>-->
-            <ul class="list-unstyled list-inline">
-               <li class="list-inline-item">
-                  <h5><i class="fas fa-map-marker-alt mr-3" aria-hidden="true"></i>Address: <a href="https://www.google.com/maps/place/1+Midland+Square,+Midland+WA+6056/@-31.8868518,116.0025325,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32b82f4b7c575f:0xe34af37479937303!8m2!3d-31.8868518!4d116.0047212">1 Midland Sq, Midland 6056</a></h5>
-               </li>
-               <li class="list-inline-item">
-                  <h5><i class="fa fa-envelope mr-3" aria-hidden="true"></i>Email: <a href="mailto:info@data.wa.gov.au">info@data.wa.gov.au</a></h5>
-               </li>
-               <li class="list-inline-item">
-                  <h5><i class="fas fa-phone-alt mr-3" aria-hidden="true"></i>Phone: +61 (0)8 9273 7373</h5>
-               </li>
-            </ul>
+    <div class="container">
+        <form class="text-center" action="#!">
+            <div class="row d-flex">
+                <div class="col-md-6 mb-3">
+                    <p class="h3 mb-4 mt-4">Get in Touch</p>
+                    <!-- Name -->
+                    <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+                    <!-- Email -->
+                    <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+                    <!-- Subject -->
+                    <select class="browser-default custom-select mb-4">
+                        <option value="" disabled>Choose option</option>
+                        <option value="1" selected>Data WA Question</option>
+                        <option value="2">SLIP Question</option>
+                        <option value="3">Request a dataset </option>
+                        <option value="4">Suggestions & Feedback</option>
+                        <option value="5">Other</option>
+                    </select>
+                    <!-- Message -->
+                    <div class="form-group">
+                        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="4" placeholder="Message"></textarea>
+                    </div>
+                    <!-- Send button -->
+                    <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        </form>
+        </div>
+        <div class="col-md-6">
+
+            <p class="h3 mb-4 mt-4">Contact Details</p>
+            <p><h4><i class="fa fa-envelope fa-lg mr-3" aria-hidden="true"></i>Email: <a href="mailto:info@data.wa.gov.au">info@data.wa.gov.au</a></h4></p>
+            <p><h4><i class="fas fa-map-marker-alt fa-lg mr-3" aria-hidden="true"></i>Address: <a href="https://www.google.com/maps/place/1+Midland+Square,+Midland+WA+6056/@-31.8868518,116.0025325,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32b82f4b7c575f:0xe34af37479937303!8m2!3d-31.8868518!4d116.0047212">1 Midland Sq, Midland 6056</a></h4></p>
+            <p><h4><i class="fas fa-phone-alt fa-lg mr-3" aria-hidden="true"></i>Phone: +61 (0)8 9273 7373</h4></p>
+
+
             <br>
             <ul class="list-unstyled list-inline">
                 <li class="list-inline-item">
-                   <a class="btn-floating btn-lg mx-1" href="https://www.youtube.com/channel/UCRp1kcYNF-IWvv4rIv42Plg/videos" aria-label="youtube">
-                   <i class="fab fa-youtube" aria-hidden="true"></i>
-                   </a>
+                    <a class="btn-floating btn-lg mx-1" href="https://www.youtube.com/channel/UCRp1kcYNF-IWvv4rIv42Plg/videos" aria-label="youtube">
+                        <i class="fab fa-youtube fa-lg" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li class="list-inline-item">
-                   <a class="btn-floating btn-lg rgba-white-slight mx-1">
-                   <i class="fab fa-facebook-square" aria-hidden="true"></i>
-                   </a>
+                    <a class="btn-floating btn-lg rgba-white-slight mx-1">
+                        <i class="fab fa-facebook-square fa-lg" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li class="list-inline-item">
-                   <a class="btn-floating btn-lg rgba-white-slight mx-1" href="https://twitter.com/datagovwa?lang=en" aria-label="twitter">
-                   <i class="fab fa-twitter" aria-hidden="true"></i>
-                   </a>
+                    <a class="btn-floating btn-lg rgba-white-slight mx-1" href="https://twitter.com/datagovwa?lang=en" aria-label="twitter">
+                        <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li class="list-inline-item">
-                   <a class="btn-floating btn-lg rgba-white-slight mx-1">
-                   <i class="fab fa-linkedin" aria-hidden="true"></i>
-                   </a>
+                    <a class="btn-floating btn-lg rgba-white-slight mx-1">
+                        <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+                    </a>
                 </li>
-             </ul>
-            </div>
-         </div>
-      </div>
-      <!-- End Contact Stuff 
-      
+            </ul>
+        </div>
+
+    </div>
+    </div>
+    <!-- End Contact Stuff 
+
       -->
-      <footer class="page-footer font-small mdb-color pt-4">
-         <!-- Footer Links -->
-         <div class="container text-center text-md-left">
+    <footer class="page-footer font-small mdb-color pt-4">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
             <!-- Footer links -->
             <div class="row text-center text-md-left mt-3 pb-3">
-               <!-- Grid column -->
-               <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Acknowledgement</h6>
-                  <p>The Government of Western Australia respectfully acknowledges the traditional owners of country throughout Western Australia and pays its respects to Elders past, present and emerging. </p>
-               </div>
-               <!-- Grid column -->
-               <hr class="w-100 clearfix d-md-none">
-               <!-- Grid column -->
-               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-                  <p>
-                     <a href="https://catalogue.data.wa.gov.au/user/login">Publisher Login</a>
-                  </p>
-                  <p>
-                     <a href="#!">About</a>
-                  </p>
-                  <p>
-                     <a href="policy.html">Policy</a>
-                  </p>
-                  <p>
-                     <a href="progress.html">Progress</a>
-                  </p>
-               </div>
-               <!-- Grid column -->
-               <hr class="w-100 clearfix d-md-none">
-               <!-- Grid column -->
-               <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Legal</h6>
-                  <p>
-                     <a href="accessibility.html">Accessibility</a>
-                  </p>
-                  <p>
-                     <a href="copyright.html">Copyright</a>
-                  </p>
-                  <p>
-                     <a href="disclaimer.html">Disclaimer</a>
-                  </p>
-                  <p>
-                     <a href="privacy.html">Privacy</a>
-                  </p>
-               </div>
-               <!-- Grid column -->
-               <hr class="w-100 clearfix d-md-none">
-               <!-- Grid column -->
-               <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                  <p>
-                     <i class="fas fa-map-marker-alt mr-3" aria-hidden="true"></i> <a href="https://www.google.com/maps/place/1+Midland+Square,+Midland+WA+6056/@-31.8868518,116.0025325,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32b82f4b7c575f:0xe34af37479937303!8m2!3d-31.8868518!4d116.0047212">1 Midland Sq, Midland 6056</a>
-                  </p>
-                  <p>
-                     <i class="fa fa-envelope mr-3" aria-hidden="true"></i> <a href="mailto:info@data.wa.gov.au">info@data.wa.gov.au</a>
-                  </p>
-                  <p>
-                     <i class="fas fa-phone-alt mr-3" aria-hidden="true"></i> +61 (0)8 9273 7373
-                  </p>
-                  <p>
-                     <i class="fa fa-print mr-3" aria-hidden="true"></i> +61 (0)8 9250 3187
-                  </p>
-               </div>
-               <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Acknowledgement</h6>
+                    <p>The Government of Western Australia respectfully acknowledges the traditional owners of country throughout Western Australia and pays its respects to Elders past, present and emerging. </p>
+                </div>
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+                    <p>
+                        <a href="https://catalogue.data.wa.gov.au/user/login">Publisher Login</a>
+                    </p>
+                    <p>
+                        <a href="#!">About</a>
+                    </p>
+                    <p>
+                        <a href="policy.html">Policy</a>
+                    </p>
+                    <p>
+                        <a href="progress.html">Progress</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Legal</h6>
+                    <p>
+                        <a href="accessibility.html">Accessibility</a>
+                    </p>
+                    <p>
+                        <a href="copyright.html">Copyright</a>
+                    </p>
+                    <p>
+                        <a href="disclaimer.html">Disclaimer</a>
+                    </p>
+                    <p>
+                        <a href="privacy.html">Privacy</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p>
+                        <i class="fas fa-map-marker-alt mr-3" aria-hidden="true"></i> <a href="https://www.google.com/maps/place/1+Midland+Square,+Midland+WA+6056/@-31.8868518,116.0025325,17z/data=!3m1!4b1!4m5!3m4!1s0x2a32b82f4b7c575f:0xe34af37479937303!8m2!3d-31.8868518!4d116.0047212">1 Midland Sq, Midland 6056</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope mr-3" aria-hidden="true"></i> <a href="mailto:info@data.wa.gov.au">info@data.wa.gov.au</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt mr-3" aria-hidden="true"></i> +61 (0)8 9273 7373
+                    </p>
+                    <p>
+                        <i class="fa fa-print mr-3" aria-hidden="true"></i> +61 (0)8 9250 3187
+                    </p>
+                </div>
+                <!-- Grid column -->
             </div>
             <!-- Footer links -->
             <!-- Grid row -->
             <div class="row d-flex align-items-center">
-               <!-- Grid column -->
-               <div class="col-md-5 col-lg-4 ml-lg-0">
-                  <!-- Social buttons -->
-                  <div class="text-center text-md-left">
-                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                           <a class="btn-floating btn-lg rgba-white-slight mx-1" href="https://www.youtube.com/channel/UCRp1kcYNF-IWvv4rIv42Plg/videos" aria-label="youtube">
-                           <i class="fab fa-youtube" aria-hidden="true"></i>
-                           </a>
-                        </li>
-                        <li class="list-inline-item">
-                           <a class="btn-floating btn-lg rgba-white-slight mx-1">
-                           <i class="fab fa-facebook-square" aria-hidden="true"></i>
-                           </a>
-                        </li>
-                        <li class="list-inline-item">
-                           <a class="btn-floating btn-lg rgba-white-slight mx-1" href="https://twitter.com/datagovwa?lang=en" aria-label="twitter">
-                           <i class="fab fa-twitter" aria-hidden="true"></i>
-                           </a>
-                        </li>
-                        <li class="list-inline-item">
-                           <a class="btn-floating btn-lg rgba-white-slight mx-1">
-                           <i class="fab fa-linkedin" aria-hidden="true"></i>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <!-- Grid column -->
-               <div class="col-md-7 col-lg-8">
-                  <!--Copyright-->
-                  <p id="copyright" class="text-center text-md-right">&copy; CurrentCopyrightYear Government of Western Australia</p>
-               </div>
+                <!-- Grid column -->
+                <div class="col-md-5 col-lg-4 ml-lg-0">
+                    <!-- Social buttons -->
+                    <div class="text-center text-md-left">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg rgba-white-slight mx-1" href="https://www.youtube.com/channel/UCRp1kcYNF-IWvv4rIv42Plg/videos" aria-label="youtube">
+                                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg rgba-white-slight mx-1">
+                                    <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg rgba-white-slight mx-1" href="https://twitter.com/datagovwa?lang=en" aria-label="twitter">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-lg rgba-white-slight mx-1">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <div class="col-md-7 col-lg-8">
+                    <!--Copyright-->
+                    <p id="copyright" class="text-center text-md-right">&copy; CurrentCopyrightYear Government of Western Australia</p>
+                </div>
             </div>
             <!-- Grid row -->
-         </div>
-         <!-- Footer Links -->
-      </footer>
-      <!-- Footer -->
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script async src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      <script async src="auto-complete.js"></script>
-      <script async src="main.js"></script>
-   </body>
+        </div>
+        <!-- Footer Links -->
+    </footer>
+    <!-- Footer -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script async src="auto-complete.js"></script>
+    <script async src="main.js"></script>
+</body>
+
 </html>
