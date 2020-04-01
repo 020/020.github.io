@@ -92,7 +92,7 @@ var theme_defns = {
         icon: "fa-users"
     },
     "Health Care": {
-        icon: "fas fa-first-aid"
+        icon: "fas fa-plus-square"
     },
     "Justice Administration": {
         icon: "fa-balance-scale"
