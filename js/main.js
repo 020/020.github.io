@@ -2,6 +2,14 @@ $(document).ready(function() {
     $('.header').height($(window).height());
 })
 
+var dteNow = new Date();
+var intYear = dteNow.getFullYear();
+
+$('#copyright').each(function() {
+    var text = $(this).text();
+    $(this).text(text.replace('CurrentCopyrightYear', intYear)); 
+});
+
 $(document).ready(function(){
 	$(window).scroll(function () {
 			if ($(this).scrollTop() > 50) {
@@ -388,11 +396,4 @@ function searchType() {
     }
 }
 
-// Body js
-var dteNow = new Date();
-var intYear = dteNow.getFullYear();
 
-$('#copyright').each(function() {
-    var text = $(this).text();
-    $(this).text(text.replace('CurrentCopyrightYear', intYear)); 
-});
