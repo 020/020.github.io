@@ -2,29 +2,21 @@ $(document).ready(function() {
     $('.header').height($(window).height());
 })
 
-var dteNow = new Date();
-var intYear = dteNow.getFullYear();
-
-$('#copyright').each(function() {
-    var text = $(this).text();
-    $(this).text(text.replace('CurrentCopyrightYear', intYear)); 
-});
-
-$(document).ready(function(){
-	$(window).scroll(function () {
-			if ($(this).scrollTop() > 50) {
-				$('#back-to-top').fadeIn();
-			} else {
-				$('#back-to-top').fadeOut();
-			}
-		});
-		// scroll body to 0px on click
-		$('#back-to-top').click(function () {
-			$('body,html').animate({
-				scrollTop: 0
-			}, 400);
-			return false;
-		});
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+    // scroll body to 0px on click
+    $('#back-to-top').click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
 });
 
 var default_defn = {
@@ -164,49 +156,140 @@ $.when(get_package_counts_by_facet("theme"), get_package_counts_by_facet("geospa
 
 var top_search = new autoComplete({
     selector: '#top_search',
-    minChars: 2,
+    minChars: 3,
     source: function(term, suggest) {
-        term = term.toLowerCase();
-        $.ajax({
-            url: ckan_url + "/api/3/action/tag_list",
-            type: "GET",
-            dataType: "json",
-            complete: function(data) {
-                if (data.responseJSON.success === true) {
-                    var choices = [];
-                    choices = Object.assign(choices, data.responseJSON.result);
-                    var suggestions = [];
-                    for (i = 0; i < choices.length; i++)
-                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
-                    suggest(suggestions);
-                }
+        term = term.toLowerCase()
+
+        function get_ckan_goodies(goodies_type) {
+            return $.ajax({
+                url: ckan_url + "/api/3/action/" + goodies_type,
+                type: "GET",
+                dataType: "json",
+            })
+        }
+
+        $.when(get_ckan_goodies("tag_list"), get_ckan_goodies("package_list")).done(function(tag_list, package_list) {
+
+            var all_tag_package = []
+            if (Array.isArray(tag_list) === true && tag_list[0] !== undefined && tag_list[0]["success"] === true) {
+                all_tag_package = Object.assign(all_tag_package, tag_list[0]["result"])
             }
-        });
+
+            if (package_list[0]["success"] == true) {
+                all_tag_package = Object.assign(all_tag_package, package_list[0]["result"])
+                all_tag_package = all_tag_package.map(function(x) {
+                    return x.toLowerCase()
+                })
+
+                for (var i = 0; i < all_tag_package.length; i++)
+                    all_tag_package[i] = all_tag_package[i].replace(/-/g, ' ').replace(/_/g, ' ')
+
+                var suggestions = [];
+                for (i = 0; i < all_tag_package.length; i++)
+                    if (~all_tag_package[i].toLowerCase().indexOf(term)) suggestions.push(all_tag_package[i])
+                suggestions = suggestions.filter((x, i, a) => a.indexOf(x) == i)
+                suggest(suggestions);
+            }
+        })
     }
 });
 
 var main_search = new autoComplete({
     selector: '#main_search',
-    minChars: 2,
+    minChars: 3,
     source: function(term, suggest) {
         term = term.toLowerCase();
-        $.ajax({
-            url: ckan_url + "/api/3/action/tag_list",
-            type: "GET",
-            dataType: "json",
-            complete: function(data) {
-                if (data.responseJSON.success === true) {
-                    var choices = [];
-                    choices = Object.assign(choices, data.responseJSON.result);
-                    var suggestions = [];
-                    for (i = 0; i < choices.length; i++)
-                        if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
-                    suggest(suggestions);
-                }
+
+        function get_ckan_goodies(goodies_type) {
+            return $.ajax({
+                url: ckan_url + "/api/3/action/" + goodies_type,
+                type: "GET",
+                dataType: "json",
+            })
+        }
+
+        $.when(get_ckan_goodies("tag_list"), get_ckan_goodies("package_list")).done(function(tag_list, package_list) {
+
+            var all_tag_package = []
+            if (Array.isArray(tag_list) === true && tag_list[0] !== undefined && tag_list[0]["success"] === true) {
+                all_tag_package = Object.assign(all_tag_package, tag_list[0]["result"])
             }
-        });
+
+            if (package_list[0]["success"] == true) {
+                all_tag_package = Object.assign(all_tag_package, package_list[0]["result"])
+                all_tag_package = all_tag_package.map(function(x) {
+                    return x.toLowerCase()
+                })
+
+                for (var i = 0; i < all_tag_package.length; i++)
+                    all_tag_package[i] = all_tag_package[i].replace(/-/g, ' ').replace(/_/g, ' ')
+
+                var suggestions = [];
+                for (i = 0; i < all_tag_package.length; i++)
+                    if (~all_tag_package[i].toLowerCase().indexOf(term)) suggestions.push(all_tag_package[i])
+                suggestions = suggestions.filter((x, i, a) => a.indexOf(x) == i)
+                suggest(suggestions);
+            }
+        })
     }
 });
+
+
+var zen_search = new autoComplete({
+    selector: '#zen_search',
+    minChars: 3,
+    source: function(term, suggest) {
+        term = term.toLowerCase();
+
+        function getZenArticles(progress, url = 'https://toolkit.data.wa.gov.au/api/v2/help_center/en-gb/articles.json', articles = []) {
+            return new Promise((resolve, reject) => fetch(url)
+                            .then(response => {
+                                if (response.status !== 200) {
+                                    throw `${response.status}: ${response.statusText}`;
+                                }
+                                response.json().then(data => {
+                                    articles = articles.concat(data.articles);
+
+                                    if (data.next_page) {
+                                        progress && progress(articles);
+                                        getZenArticles(progress, data.next_page, articles).then(resolve).catch(reject)
+                                    } else {
+                                        resolve(articles);
+                                    }
+                                }).catch(reject);
+                            }).catch(reject));
+                    }
+
+                    function progressCallback(articles) {
+                        // render progress
+                        //console.log(`${articles.length} loaded`);
+                    }
+
+                    getZenArticles(progressCallback)
+                        .then(articles => {
+                            // all articles have been loaded
+                            var zendesk_list = []
+                            for (var i = 0; i < articles.length; i++) {
+                                zendesk_list.push(articles[i].title)
+                                for (var j = 0; j < articles[i].label_names.length; j++) {
+                                    zendesk_list.push(articles[i].label_names[j])
+                                }
+                            }
+  
+                            var choices = zendesk_list.filter(function(elem, index, self) {
+                                return index === self.indexOf(elem);
+                            });
+
+                            var suggestions = [];
+                            for (i = 0; i < choices.length; i++)
+                                if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                            suggest(suggestions);
+                            //console.log(choices)
+                        })
+                        .catch(console.error);
+                }
+            });
+    
 
 function searchType() {
 
@@ -224,25 +307,41 @@ function searchType() {
             top_search.destroy();
             var data_search = new autoComplete({
                 selector: '#top_search',
-                minChars: 2,
+                minChars: 3,
                 source: function(term, suggest) {
                     term = term.toLowerCase();
-                    var ckan_url = "https://catalogue.data.wa.gov.au"
-                    $.ajax({
-                        url: ckan_url + "/api/3/action/tag_list",
-                        type: "GET",
-                        dataType: "json",
-                        complete: function(data) {
-                            if (data.responseJSON.success === true) {
-                                var choices = [];
-                                choices = Object.assign(choices, data.responseJSON.result);
-                                var suggestions = [];
-                                for (i = 0; i < choices.length; i++)
-                                    if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
-                                suggest(suggestions);
-                            }
+
+                    function get_ckan_goodies(goodies_type) {
+                        return $.ajax({
+                            url: ckan_url + "/api/3/action/" + goodies_type,
+                            type: "GET",
+                            dataType: "json",
+                        })
+                    }
+
+                    $.when(get_ckan_goodies("tag_list"), get_ckan_goodies("package_list")).done(function(tag_list, package_list) {
+
+                        var all_tag_package = []
+                        if (Array.isArray(tag_list) === true && tag_list[0] !== undefined && tag_list[0]["success"] === true) {
+                            all_tag_package = Object.assign(all_tag_package, tag_list[0]["result"])
                         }
-                    });
+
+                        if (package_list[0]["success"] == true) {
+                            all_tag_package = Object.assign(all_tag_package, package_list[0]["result"])
+                            all_tag_package = all_tag_package.map(function(x) {
+                                return x.toLowerCase()
+                            })
+
+                            for (var i = 0; i < all_tag_package.length; i++)
+                                all_tag_package[i] = all_tag_package[i].replace(/-/g, ' ').replace(/_/g, ' ')
+
+                            var suggestions = [];
+                            for (i = 0; i < all_tag_package.length; i++)
+                                if (~all_tag_package[i].toLowerCase().indexOf(term)) suggestions.push(all_tag_package[i])
+                            suggestions = suggestions.filter((x, i, a) => a.indexOf(x) == i)
+                            suggest(suggestions);
+                        }
+                    })
                 }
             });
             break;
@@ -251,7 +350,7 @@ function searchType() {
             top_search.destroy();
             var org_search = new autoComplete({
                 selector: '#top_search',
-                minChars: 2,
+                minChars: 3,
                 source: function(term, suggest) {
                     term = term.toLowerCase();
                     $.ajax({
@@ -262,7 +361,6 @@ function searchType() {
                             if (data.responseJSON.success === true) {
                                 var choices = [];
                                 for (var i = 0; i < data.responseJSON.result.length; i++) {
-                                    console.log(data.responseJSON.result[i].title)
                                     choices.push(data.responseJSON.result[i].title)
                                 }
                                 var suggestions = [];
@@ -280,7 +378,7 @@ function searchType() {
             top_search.destroy();
             var group_search = new autoComplete({
                 selector: '#top_search',
-                minChars: 2,
+                minChars: 3,
                 source: function(term, suggest) {
                     term = term.toLowerCase();
                     $.ajax({
@@ -301,14 +399,13 @@ function searchType() {
                     });
                 }
             });
-
             break;
         case 3:
             form.action = "https://catalogue.data.wa.gov.au/showcase"
             top_search.destroy();
             var app_search = new autoComplete({
                 selector: '#top_search',
-                minChars: 2,
+                minChars: 3,
                 source: function(term, suggest) {
                     term = term.toLowerCase();
                     $.ajax({
@@ -324,6 +421,10 @@ function searchType() {
                                         showcase_list.push(data.responseJSON.result[i].tags[j].name)
                                     }
                                 }
+                                showcase_list = showcase_list.map(function(x) {
+                                    return x.toLowerCase();
+                                })
+
                                 var choices = showcase_list.filter(function(elem, index, self) {
                                     return index === self.indexOf(elem);
                                 });
@@ -343,7 +444,7 @@ function searchType() {
             top_search.destroy();
             var zen_search = new autoComplete({
                 selector: '#top_search',
-                minChars: 2,
+                minChars: 3,
                 source: function(term, suggest) {
                     term = term.toLowerCase();
 
@@ -376,10 +477,12 @@ function searchType() {
                             // all articles have been loaded
                             var zendesk_list = []
                             for (var i = 0; i < articles.length; i++) {
+                                zendesk_list.push(articles[i].title)
                                 for (var j = 0; j < articles[i].label_names.length; j++) {
                                     zendesk_list.push(articles[i].label_names[j])
                                 }
                             }
+
                             var choices = zendesk_list.filter(function(elem, index, self) {
                                 return index === self.indexOf(elem);
                             });
@@ -396,4 +499,11 @@ function searchType() {
     }
 }
 
+// Body js
+var dteNow = new Date();
+var intYear = dteNow.getFullYear();
 
+$('#copyright').each(function() {
+    var text = $(this).text();
+    $(this).text(text.replace('CurrentCopyrightYear', intYear));
+});
