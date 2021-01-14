@@ -354,7 +354,7 @@ function searchType() {
                 source: function(term, suggest) {
                     term = term.toLowerCase();
                     $.ajax({
-                        url: ckan_url + "/api/3/action/organization_list?all_fields=true",
+                        url: ckan_url + "/api/3/action/organization_list",
                         type: "get",
                         dataType: "json",
                         complete: function(data) {
