@@ -361,8 +361,12 @@ function searchType() {
                             if (data.responseJSON.success === true) {
                                 var choices = [];
                                 for (var i = 0; i < data.responseJSON.result.length; i++) {
-                                    choices.push(data.responseJSON.result[i].title)
+                                    choices.push(data.responseJSON.result[i])
                                 }
+
+                                for (var i = 0; i < choices.length; i++)
+                                    choices[i] = choices[i].replace(/-/g, ' ').replace(/_/g, ' ')
+
                                 var suggestions = [];
                                 for (i = 0; i < choices.length; i++)
                                     if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
@@ -382,14 +386,18 @@ function searchType() {
                 source: function(term, suggest) {
                     term = term.toLowerCase();
                     $.ajax({
-                        url: ckan_url + "/api/3/action/group_list?all_fields=true",
+                        url: ckan_url + "/api/3/action/group_list",
                         type: "get",
                         dataType: "json",
                         complete: function(data) {
                             if (data.responseJSON.success === true) {
                                 var choices = [];
                                 for (var i = 0; i < data.responseJSON.result.length; i++)
-                                    choices.push(data.responseJSON.result[i].title)
+                                    choices.push(data.responseJSON.result[i])
+
+                                for (var i = 0; i < choices.length; i++)
+                                    choices[i] = choices[i].replace(/-/g, ' ').replace(/_/g, ' ')
+    
                                 var suggestions = [];
                                 for (i = 0; i < choices.length; i++)
                                     if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
