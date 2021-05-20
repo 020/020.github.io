@@ -11,6 +11,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="css/auto-complete.css">
+    <!-- Saber Feedback button -->
+<script type="text/javascript">
+    (function(){
+      window.Saber={
+          apiKey: '2460c825bc078d930899',
+          com:[],do:function(){this.com.push(arguments)}
+      };
+      var e = document.createElement("script");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src", "https://widget.saberfeedback.com/v2/widget.js");
+      document.getElementsByTagName("head")[0].appendChild(e);
+    })();
+  </script>
+  <!-- End of Saber Feedback button -->
 </head>
 
 <body>
@@ -18,7 +32,7 @@
         <div class="row align-items-end">
             <div class="col-md-6 mb-3 mt-3">
                 <a href="https://www.data.wa.gov.au">
-                    <img src="images/logo5.svg" alt="Data WA Logo">
+                    <img src="images/dwalogo.svg" alt="Data WA Logo">
                 </a>
             </div>
             <div class="col-md-6 mt-3 mb-3">
@@ -84,8 +98,13 @@
         </div>
     </nav>
     <div class="container">
+
+        <div class="container text-center mt-4">
+            <h4>Data WA is the place to discover WA public sector data and connect with the broader <a href="https://forum.data.wa.gov.au">data community</a>.
+                The <a href="https://catalogue.data.wa.gov.au/">data catalogue</a> provides access to datasets provided by <a href="https://catalogue.data.wa.gov.au/">organisations</a> across the public sector.</h4>
+        </div>    
         <form class="main_search_input" name="main_search_input" action="https://catalogue.data.wa.gov.au/dataset" method="get" target="_blank">
-            <div class="input-group input-group-lg mb-5 mt-5">
+            <div class="input-group input-group-lg mb-4 mt-4">
                 <input id="main_search" name="q" type="search" class="form-control" aria-label="searchbox" placeholder="Search for Western Australian Government data">
                 <button class="btn btn-outline-secondary" name="submit" type="submit" aria-label="submit button">
                     <i class="fa fa-search fa-lg" aria-hidden="true"></i>
@@ -94,6 +113,8 @@
 
         </div>
     </div>
+
+ 
 
     <div class="container categories_actual">
         <div class="row">
@@ -104,7 +125,7 @@
 
     <div class="jumbotron jumbotron-fluid ">
         <div class="container text-center">
-            <h1>Join the community that is committed to providing West Australian government data</h1>
+            <h3>Join the community that is committed to providing West Australian government data</h3>
             <p class="lead">
                 <a class="btn btn-primary btn-lg" href="#" role="button">Join the Data WA community</a>
             </p>
@@ -137,6 +158,9 @@
                     </p>
                     <p>
                         <a href="progress.html">Progress</a>
+                    </p>
+                    <p>
+                        <a href="progress.html">Status Page</a>
                     </p>
                 </div>
                 <!-- Grid column -->
